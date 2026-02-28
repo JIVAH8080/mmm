@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube to MP3/MP4 Converter</title>
+    <meta name="description" content="A modern form design for GitHub Pages deployment">
+    <title>Modern Form Design</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>YouTube to MP3/MP4 Converter</h1>
-    <form action="/convert" method="post">
-        <label for="url">Enter the URL of the YouTube video:</label><br>
-        <input type="text" id="url" name="url" required><br><br>
-        <label for="format">Choose format:</label><br>
-        <select id="format" name="format">
-            <option value="mp3">MP3</option>
-            <option value="mp4">MP4</option>
-        </select><br><br>
-        <input type="submit" value="Convert">
+    <h1>Welcome to My Modern Form</h1>
+    <form action="/api/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Submit</button>
     </form>
+    <footer>
+        <h2>API Instructions</h2>
+        <p>To use the form API, send a POST request to <code>/api/submit</code> with the following parameters:</p>
+        <ul>
+            <li><code>name</code>: Your name</li>
+            <li><code>email</code>: Your email address</li>
+            <li><code>message</code>: Your message</li>
+        </ul>
+    </footer>
 </body>
 </html>
